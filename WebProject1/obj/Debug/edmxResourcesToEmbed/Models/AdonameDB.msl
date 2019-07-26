@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FirstDBModelStoreContainer" CdmEntityContainer="FirstDBEntities1">
+    <EntitySetMapping Name="Table3">
+      <EntityTypeMapping TypeName="FirstDBModel.Table3">
+        <MappingFragment StoreEntitySet="Table3">
+          <ScalarProperty Name="Register_no" ColumnName="Register_no" />
+          <ScalarProperty Name="custname" ColumnName="custname" />
+          <ScalarProperty Name="Phone_no" ColumnName="Phone_no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

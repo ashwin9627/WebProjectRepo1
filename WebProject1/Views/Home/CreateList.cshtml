@@ -1,0 +1,68 @@
+﻿<style>
+    #b1
+    {
+        text-align:center;
+    }
+</style>
+@model WebProject1.Models.Table3
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()   
+    <div class="form-horizontal">
+        <h4>Table3</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Register_no, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Register_no, new { htmlAttributes = new { @class = "form-control" } })      
+                @Html.ValidationMessageFor(model => model.Register_no, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.custname, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.custname, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.custname, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Phone_no, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Phone_no, new { htmlAttributes = new { @class = "form-control" } })               
+            </div>
+        </div>
+        @Html.ValidationMessageFor(model => model.Phone_no, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-success" id="b2" />                
+            </div>
+        </div>
+    </div>   
+}
+<button class="btn btn-danger" id="b1">Clear</button>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+<script src="~/Scripts/jquery-3.4.1.intellisense.js"></script>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+<Script>
+    $(Document).ready(function () {
+        $("#b1").click(function () {
+            $(".form-control").val("");         
+        });
+    });
+</Script>
+<span>@ViewBag.Error</span>
+<span>@ViewBag.ang</span>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+@if (Model != null)
+{
+    <script type="text/javascript">
+        $(".b2").click(function () {         
+                alert("Inserted Register ID: " + @Model.Register_no);
+            });
+    </script>
+}

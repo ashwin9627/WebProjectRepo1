@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FirstDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Table3">
+    <Key>
+      <PropertyRef Name="Register_no" />
+    </Key>
+    <Property Name="Register_no" Type="Int32" Nullable="false" />
+    <Property Name="custname" Type="String" MaxLength="244" FixedLength="false" Unicode="false" />
+    <Property Name="Phone_no" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="FirstDBEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Table3" EntityType="Self.Table3" />
+  </EntityContainer>
+</Schema>

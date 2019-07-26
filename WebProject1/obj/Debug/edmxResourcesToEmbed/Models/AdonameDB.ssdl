@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FirstDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Table3">
+    <Key>
+      <PropertyRef Name="Register_no" />
+    </Key>
+    <Property Name="Register_no" Type="int" Nullable="false" />
+    <Property Name="custname" Type="varchar" MaxLength="244" />
+    <Property Name="Phone_no" Type="int" />
+  </EntityType>
+  <EntityContainer Name="FirstDBModelStoreContainer">
+    <EntitySet Name="Table3" EntityType="Self.Table3" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
